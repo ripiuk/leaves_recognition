@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:recognition="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+Lol
+<form action="recognize" method="post">
+    <input type="submit" value="Submit">
+</form>
+<ul>
+    <li><a href="test.py">Try Me</a> </li>
+</ul>
+-->
+<form action="{% url 'recognition:index' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="submit" />
+</form>
+
+</body>
+</html>
