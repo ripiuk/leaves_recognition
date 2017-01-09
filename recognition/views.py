@@ -46,5 +46,9 @@ def img_detail(request, id=None):
         'image': instance.image,
         'instance' : instance,
         'result' : result,
+        'first_label': result[0],
+        'first_score': result[1],
+        'second_label': result[2],
+        'second_score': result[3],
     }
     return render(request, "recognition/recognition_image.html", context)

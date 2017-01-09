@@ -1,4 +1,5 @@
 import tensorflow as tf
+import os
 
 def recognition(image_path):
     # Read in the image_data
@@ -6,10 +7,10 @@ def recognition(image_path):
 
     # Loads label file, strips off carriage return
     label_lines = [line.rstrip() for line
-                       in tf.gfile.GFile("/home/sany/TF/google_dev_01/leaves_classification/retrained_labels.txt")]
+                       in tf.gfile.GFile(os.getcwd() + "/recognition/what_leaf_is/retrained_labels.txt")]
 
     # Unpersists graph from file
-    with tf.gfile.FastGFile("/home/sany/TF/google_dev_01/leaves_classification/retrained_graph.pb", 'rb') as f:
+    with tf.gfile.FastGFile(os.getcwd() + "/recognition/what_leaf_is/retrained_graph.pb", 'rb') as f:
         graph_def = tf.GraphDef()
         graph_def.ParseFromString(f.read())
         _ = tf.import_graph_def(graph_def, name='')
@@ -23,11 +24,13 @@ def recognition(image_path):
 
         # Sort to show labels of first prediction in order of confidence
         top_k = predictions[0].argsort()[-len(predictions[0]):][::-1]
-        result = ''
+        result = []
         for node_id in top_k:
             human_string = label_lines[node_id]
             score = predictions[0][node_id]
-            result = result + ('%s (score = %.5f)' % (human_string, score))
+            result.append(human_string)
+            result.append(score)
+            #result = result + ('%s (score = %.5f)' % (human_string, score))
     return result
 
 def test(path):
