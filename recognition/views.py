@@ -53,4 +53,8 @@ def img_detail(request, id=None):
     }
     return render(request, "recognition/recognition_image.html", context)
 
-
+class ShowAll(generic.ListView):
+    template_name = 'recognition/show_all.html'
+    context_object_name = 'all_images'
+    def get_queryset(self):
+        return RecognitionImage.objects.all()

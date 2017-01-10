@@ -6,7 +6,7 @@ var ctx = document.getElementById("myDoughnutChart");
                     ],
                     datasets: [
                         {
-                            data: [{{first_score}}*100, {{second_score}}*100],
+                            data: [100, 100],
                             backgroundColor: [
                                 "#FF6384",
                                 "#36A2EB"

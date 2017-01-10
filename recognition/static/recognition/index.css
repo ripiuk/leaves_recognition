@@ -39,6 +39,9 @@ body{
     max-height: 600px;
     max-width: 100%;
 }
+.img-show{
+    height:100%;
+}
 .fileUpload {
     position: relative;
     overflow: hidden;
