@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <link rel="stylesheet", type="text/css" href="{% static 'recognition/index.css'%}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="{% static 'recognition/chart.js'%}"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -27,7 +28,7 @@
                 <li class="{% block category_active %} {% endblock %}">
                     <a href="#">
                         <span class="glyphicon glyphicon-list-alt"aria-hidden="true"></span>&nbsp;
-                        Category
+                        See all
                     </a>
                 </li>
                 <li class="{% block product_active %} {% endblock %}">

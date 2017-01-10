@@ -52,3 +52,5 @@ def img_detail(request, id=None):
         'second_score': result[3],
     }
     return render(request, "recognition/recognition_image.html", context)
+
+

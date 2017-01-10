@@ -1,7 +1,7 @@
 from django import forms
 
 class RecignitionImageForm(forms.Form):
-    image = forms.FileField(label = 'Select an image:')
+    image = forms.FileField(label = 'Choose')
     """
     name = forms.CharField(label='Name Of Your Image', widget=forms.TextInput(attrs={'class': 'form-control', }))
     photo = forms.ImageField(label='Select a file', )
