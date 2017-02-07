@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/leaves_recognition/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="477">
-              <caret line="128" column="48" lean-forward="false" selection-start-line="128" selection-start-column="48" selection-end-line="128" selection-end-column="48" />
+              <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
               <folding>
                 <element signature="e#322#331#0" expanded="true" />
               </folding>
@@ -1097,7 +1097,7 @@
     <entry file="file://$PROJECT_DIR$/leaves_recognition/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
-          <caret line="128" column="48" lean-forward="false" selection-start-line="128" selection-start-column="48" selection-end-line="128" selection-end-column="48" />
+          <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
           <folding>
             <element signature="e#322#331#0" expanded="true" />
           </folding>
