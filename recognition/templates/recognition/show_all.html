@@ -10,13 +10,12 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <div class="thumbnail">
             <a href="{% url 'recognition:recognition_image_upload' id=image.id %}">
-            <img src="{{image.image.url}}" class="img-responsive img-show" style="display: block;object-fit: cover;height: 250px;max-width: 100%;">
-            <div class="caption">
-                <h5>In future there'll be information about what leaf is it</h5>
-            </div>
-
-                </a>
+                <img src="{{image.image.url}}" class="img-responsive img-show" style="display: block;object-fit: cover;height: 250px;max-width: 100%;">
+                <div class="caption">
+                    <h5>In future there'll be information about what leaf is it</h5>
                 </div>
+            </a>
+            </div>
         </div>
         {% endfor %}
 
